@@ -1,0 +1,47 @@
+<%= form_with(model: product) do |form| %>
+  <% if product.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    Weight <br>
+    <%= form.text_field :weight, :placeholder => 'Enter weight', :required => true  %>
+  </div>
+
+  <div>
+    Length <br>
+    <%= form.number_field :length, :placeholder => 'Enter length', :required => true  %>
+  </div>
+
+  <div>
+    Width <br>
+    <%= form.number_field :width, :placeholder => 'Enter weight', :required => true  %>
+  </div>
+
+  <div>
+    Height <br>
+    <%= form.number_field :height, :placeholder => 'Enter height', :required => true  %>
+  </div>
+
+  <div>
+    Departure <br>
+    <%= form.text_field :departure, :placeholder => 'Enter departure', :required => true  %>
+  </div> 
+
+  <div>
+    Destination <br>
+    <%= form.text_field :destination, :placeholder => 'Enter destination', :required => true  %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
