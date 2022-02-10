@@ -1,0 +1,6 @@
+{
+  "name": "ruby-test-task",
+  "engines": {
+    "node": "16.x"
+  }
+}
