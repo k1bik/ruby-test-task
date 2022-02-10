@@ -2,6 +2,10 @@
   "name": "ruby-test-task",
   "private": true,
   "license": "UNLICENSED",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
   "engines": {
     "node": "16.x"
   }
