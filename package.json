@@ -3,7 +3,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "node build-project.js",
     "test": "jest"
   },
   "engines": {
